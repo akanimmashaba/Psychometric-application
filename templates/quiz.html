@@ -1,0 +1,24 @@
+{% extends "_base.html" %}
+
+{% block content %}
+  
+<h1>Personality Assessment</h1>
+<h1>Personality Quiz</h1>
+    <form method="post">
+        {% csrf_token %}
+        {% for field in form %}
+            <p>{{ field.label }}</p>
+            <ul>
+                {% for choice in field %}
+                    <li>
+                        <label>
+                            {{ choice }}
+                            {{ choice.choice_label }}
+                        </label>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endfor %}
+        <button type="submit">Submit</button>
+    </form>
+{% endblock content %}

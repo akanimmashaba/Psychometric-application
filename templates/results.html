@@ -1,0 +1,15 @@
+{% extends "_base.html" %}
+
+{% block content %}
+  
+<h1>Personality Assessment Results</h1>
+<h1>Personality Quiz Results</h1>
+<h2>Personality Traits:</h2>
+<ul>
+    {% for trait_code, trait_value in personality_traits.items %}
+        <li>
+            <strong>{{ trait_code }}:</strong> {{ trait_value }}
+        </li>
+    {% endfor %}
+</ul>
+{% endblock content %}

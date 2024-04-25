@@ -1,0 +1,19 @@
+{% extends "_base.html" %}
+
+{% block content %}
+  
+<h1>Quiz Results</h1>
+{% if recent_result %}
+    <h2>Your Personality Traits:</h2>
+    <ul>
+        <li>Openness: {{ recent_result.openness }}</li>
+        <li>Conscientiousness: {{ recent_result.conscientiousness }}</li>
+        <li>Extraversion: {{ recent_result.extraversion }}</li>
+        <li>Agreeableness: {{ recent_result.agreeableness }}</li>
+        <li>Neuroticism: {{ recent_result.neuroticism }}</li>
+    </ul>
+    <!-- Provide personalized feedback or recommendations based on the user's personality profile -->
+{% else %}
+    <p>No quiz results found.</p>
+{% endif %}
+{% endblock content %}

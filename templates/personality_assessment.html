@@ -1,0 +1,13 @@
+{% extends "_base.html" %}
+
+{% block content %}
+  
+<h1>Personality Assessment</h1>
+<form method="post">
+    {% csrf_token %}
+    <label for="id_question_1">Question 1:</label>
+    {{ form.question_1 }}
+    <!-- Add more fields for additional questions as needed -->
+    <button type="submit">Submit</button>
+</form>
+{% endblock content %}
